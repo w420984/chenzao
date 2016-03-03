@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/sliding_menu_item_hight" 
+    android:background="@drawable/tool_box_fragment_bg_selector"
+    >
+    
+    <ImageView
+        android:id="@+id/item_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/sliding_menu_item_margin_left"
+        />
+    
+    <TextView
+        android:id="@+id/item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/sliding_menu_item_margin_middle"
+        android:singleLine="true"
+        android:textColor="@color/tool_box_text_color"
+        android:textSize="@dimen/sliding_menu_item_text_size"
+        android:textStyle="bold" />
+    
+    <TextView 
+        android:id="@+id/item_notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_white"
+        android:background="@drawable/notice_bg"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/sliding_menu_item_margin_left"
+        android:gravity="center"
+        android:visibility="gone"
+        />
+</RelativeLayout>

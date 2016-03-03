@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/common_bg"
+    android:orientation="vertical" >
+    
+	<RelativeLayout 
+	    android:id="@+id/dateGroup"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="15dp"
+	    >
+	    <TextView 
+	        android:id="@+id/date"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textColor="@color/text_color_red"
+	        android:singleLine="true"
+	        android:layout_centerHorizontal="true"
+	        android:gravity="center"
+	        />
+	    <ImageView 
+	        android:id="@+id/date_arrow_l"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toLeftOf="@id/date"
+	        android:src="@drawable/arrow_month_l"
+	        android:layout_marginRight="20dp"
+	        />
+	    <ImageView 
+	        android:id="@+id/date_arrow_r"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@id/date"
+	        android:src="@drawable/arrow_month_r"
+	        android:layout_marginLeft="20dp"
+	        />
+	</RelativeLayout>
+	<com.chenzao.pullrefresh.PullToRefreshListView
+	    android:id="@+id/pullRefreshListView"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+        android:divider="@null"
+        android:dividerHeight="8dp"
+        android:drawSelectorOnTop="false"
+        android:fadingEdge="none"
+	    android:layout_marginTop="15dp"
+	    />
+</LinearLayout>

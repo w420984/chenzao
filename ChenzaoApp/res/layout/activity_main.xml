@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    >
+
+	<android.support.v4.view.ViewPager
+        android:id="@+id/schedulerPager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        />
+	<!-- 
+	<com.chenzao.view.TaskShowView
+	    android:layout_width="300dp"
+	    android:layout_height="300dp"
+	    android:id="@+id/taskShow"
+	    android:layout_below="@id/bnTest"
+	    android:layout_marginTop="20dp"
+	    android:layout_centerHorizontal="true"
+	    /> -->
+	    
+
+</RelativeLayout>

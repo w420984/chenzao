@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="120dp"
+     >
+
+    <com.chenzao.view.RoundedImageView
+        android:id="@+id/headImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/sliding_menu_item_margin_left"
+        android:adjustViewBounds="true"
+        android:maxHeight="100dip"
+        android:maxWidth="100dip"
+        android:src="@drawable/touxiang" />
+
+    <LinearLayout 
+        android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@id/headImageView"
+	    android:layout_centerVertical="true"
+	    android:layout_marginLeft="20dp"
+	    android:orientation="vertical"
+        >
+        
+		<TextView
+		    android:id="@+id/nickNameTextView"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="@string/default_nick_name"
+		    android:textColor="@color/color_white"
+		    android:textSize="@dimen/sliding_menu_item_text_size" />
+		
+		<TextView
+		    android:id="@+id/sign"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="@string/alarm_alert_dialog_content_todo"
+		    android:textColor="@color/color_white"
+		    android:textSize="14sp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,162 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xiaosajie.chenzao"
+    android:versionCode="11"
+    android:versionName="1.0.8" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="15" />
+
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	
+	<!-- 友盟sdk -->
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    
+    <application
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name=".MainActivity"
+            android:alwaysRetainTaskState="true"
+            android:launchMode="singleTask"
+            />
+        <activity 
+            android:name="LoginActivity"/>
+        <activity 
+            android:name="RegisterActivity"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity 
+            android:name="ChangePassword"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity 
+            android:name="ForgetPassword"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity 
+            android:name="SetNewPassword"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity 
+            android:name="WebBrowser"
+            />
+        <activity 
+            android:name="PhotoAlbumActivity"/>
+        <activity 
+            android:name="NewFileStoreActivity"
+            android:windowSoftInputMode="adjustResize" 
+            />
+        <activity 
+            android:name="NewTaskSchedulerActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" 
+            />
+        
+        <activity 
+            android:name="TaskSchedulerDetailActivity"/>
+        
+        <activity 
+            android:name="FileStorageDetailActivity"/>
+        <activity 
+            android:name="SearchResultActivity"/>
+        <activity 
+            android:name="PicFilterActivity"/>
+        <activity 
+            android:name="UpdateScheduleActivity"/>
+        <activity 
+            android:name="DailyUpdateListActivity"/>
+        <activity 
+            android:name="ImageViewerActivity"/>
+        
+        <activity android:name="com.chenzao.zxing.CaptureActivity"
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="stateAlwaysHidden"
+		/>
+		
+        <activity 
+            android:name="AlarmAlert"
+            android:theme="@style/TransparentDialog"
+            />
+        
+        <activity 
+            android:name="EditUserInfoActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" 
+            />
+        
+        <activity 
+            android:name="AboutActivity"
+            />
+        
+         <receiver android:name="com.chenzao.alarm.TaskSchedulerRemindReceiver" android:process=":remote">
+            <intent-filter>   
+            	<action android:name="com.chenzao.taskscheduler.remind1"/>
+            	<action android:name="com.chenzao.taskscheduler.remind2"/>
+            	<action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+           
+        <!-- 友盟sdk -->
+        <activity
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            />
+        
+		<activity
+		    android:configChanges="keyboardHidden|orientation|screenSize"
+		    android:exported="true"
+		    android:name=".wxapi.WXEntryActivity"
+		    android:screenOrientation="portrait"
+		    android:theme="@android:style/Theme.Translucent.NoTitleBar"
+		    />
+		
+		<service
+		    android:name="com.umeng.update.net.DownloadingService"
+		    android:process=":DownloadingService" >
+		</service>
+		
+		<activity 
+		    android:name="com.umeng.update.UpdateDialogActivity"
+		    android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+		</activity>
+		
+		<activity android:name="com.umeng.fb.ConversationActivity"
+			android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:name="com.umeng.fb.ContactActivity"
+			android:theme="@android:style/Theme.NoTitleBar"/>
+		
+        <meta-data android:value="5399630d56240b3964017de2" android:name="UMENG_APPKEY"></meta-data>
+		<meta-data android:value="chenzao_0001" android:name="UMENG_CHANNEL"/>
+		
+		<meta-data android:value="wxf044f8dd4ea8e538" android:name="WEIXIN_APPKEY"></meta-data>
+		<meta-data android:value="9138005a962113e6a455abcb626d68fa" android:name="WEIXIN_APPSECRET"></meta-data>
+		
+        </application>
+
+    
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+	<uses-feature android:name="android.hardware.camera" />
+	<uses-feature android:name="android.hardware.camera.autofocus" />
+	<uses-permission android:name="android.permission.VIBRATE"/>
+  	<uses-permission android:name="android.permission.FLASHLIGHT"/>
+  	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+</manifest>

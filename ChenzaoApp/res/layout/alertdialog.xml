@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="200dp" 
+    android:background="@drawable/alarm_bg"
+    >
+    <LinearLayout 
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        >
+        
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/chenzao_title_logo" 
+            />
+
+        <TextView
+	        android:id="@+id/tvDialogTitle" 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:layout_marginLeft="10dp"
+	        android:text="@string/alarm_alert_dialog_title_todo"
+	        android:textSize="18dp"
+	        android:textColor="@android:color/white"
+        />
+    </LinearLayout>
+
+
+	<TextView
+	    android:id="@+id/tvDialogMsg" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+		android:layout_below="@id/tvDialogTitle"
+		android:layout_centerInParent="true"
+		android:layout_marginTop="20dp"
+		android:textSize="24dp"
+		android:textColor="@android:color/black"
+		android:text="@string/alarm_alert_dialog_content_todo"
+	/>
+    
+    <LinearLayout 
+        android:id="@+id/llBtnLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDialogMsg"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <RelativeLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            <Button 
+	            android:id="@+id/btn_negativebutton"
+	            android:layout_width="115dp"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/button_red"
+	            android:text="@string/alarm_alert_dialog_ok_button"
+	            android:textColor="@android:color/white"
+	            android:textSize="20dp"
+	            android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <RelativeLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            <Button 
+	            android:id="@+id/btn_positivebutton"
+	            android:layout_width="115dp"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/inputbox_sel"
+	            android:text="@string/alarm_alert_dialog_todo_button"
+	            android:textColor="@color/color_red"
+	            android:textSize="20dp"
+	            android:layout_centerInParent="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

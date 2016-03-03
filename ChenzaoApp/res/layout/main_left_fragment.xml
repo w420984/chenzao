@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/index_bg"
+    >
+	<ImageView 
+	    android:id="@+id/indexShadow"
+	    android:layout_width="wrap_content"
+	    android:layout_height="fill_parent"
+	    android:background="@drawable/index_shadow"
+	    android:layout_alignParentRight="true"
+	    />
+	    	    
+    <LinearLayout
+        android:id="@+id/llRoot"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/indexShadow"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/item_info"
+            layout="@layout/menu_item_info" />
+        <ScrollView 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            >            
+	        <LinearLayout 
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/nav_bg"
+	            android:orientation="vertical"
+	            >
+		        <com.chenzao.view.MenuItemView
+		            android:id="@+id/item_qrcode"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            />
+		
+		        <com.chenzao.view.MenuItemView
+		            android:id="@+id/item_own_task"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            />
+		        
+		        <com.chenzao.view.MenuItemView
+		            android:id="@+id/item_official_task"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            />
+		
+		        <com.chenzao.view.MenuItemView
+		            android:id="@+id/item_file"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            />
+		         
+		         <ImageView 
+		             android:layout_width="wrap_content"
+		             android:layout_height="wrap_content"
+		             android:layout_gravity="center_horizontal"
+		             android:src="@drawable/line"
+		             />
+		        
+		        <com.chenzao.view.MenuItemView
+		            android:id="@+id/item_chenzao_web"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            />
+		        
+		        <com.chenzao.view.MenuItemView
+		            android:id="@+id/item_chenzao_store"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            />
+		                
+		         <ImageView 
+		             android:layout_width="wrap_content"
+		             android:layout_height="wrap_content"
+		             android:layout_gravity="center_horizontal"
+		             android:src="@drawable/line"
+		             />
+		        
+		        <com.chenzao.view.MenuItemView
+		            android:id="@+id/item_setting"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            />
+	        </LinearLayout>
+        </ScrollView>
+	</LinearLayout>
+</RelativeLayout>

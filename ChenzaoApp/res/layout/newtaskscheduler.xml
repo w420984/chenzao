@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sl_root"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/common_bg"
+	android:padding="9dp" 
+	android:scrollbars="none">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+		
+	    <!-- 任务标题 begin-->
+	    <LinearLayout 
+	        style="@style/task_scheduler_info_detail_item"
+	        android:orientation="horizontal">
+			<ImageView 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:src="@drawable/newtask_icon_title"
+			    android:layout_gravity="center_vertical"
+			    />
+			
+			<EditText 
+				android:id="@+id/tvTitleContent"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginRight="10dp"
+				android:layout_marginLeft="8dp"
+				android:background="@drawable/input_style"
+				android:hint="@string/detail_tile"
+				android:singleLine="true"
+				android:textSize="16sp"/>
+		</LinearLayout>
+		<!-- 任务标题 end-->
+		
+		<!-- 任务说明 begin -->
+	    <LinearLayout 
+	        android:id="@+id/ll_note"
+	        style="@style/task_scheduler_info_detail_item"
+	        android:orientation="horizontal">
+			<ImageView 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:src="@drawable/newtask_icon_info"
+			    android:layout_gravity="top"
+			    />
+			<RelativeLayout 
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    >
+				<EditText 
+					android:id="@+id/tvTaskNote"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:minLines="3"
+					android:gravity="top"
+					android:layout_marginRight="10dp"
+					android:layout_marginLeft="8dp"
+					android:background="@drawable/input_style"
+					android:hint="@string/detail_intro"
+					android:textSize="16sp"/>
+				<TextView
+				    android:id="@+id/tv_note_counter" 
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_alignRight="@id/tvTaskNote"
+				    android:layout_alignBottom="@id/tvTaskNote"
+				    android:layout_marginRight="2dp"
+				    android:text="@string/text_limit"
+				    android:textColor="@color/color_red"
+				    android:textSize="10sp"
+				    />			    
+			</RelativeLayout>				
+		</LinearLayout>
+		<!-- 任务说明 end -->
+		
+		<!-- 任务开始/结束时间  begin-->
+		<RelativeLayout 
+		    android:id="@+id/rl_time"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:paddingLeft="10dp"
+		    android:paddingTop="5dp"
+		    android:paddingBottom="5dp"
+		    android:layout_marginRight="10dp"
+		    >
+		    <ImageView 
+				android:id="@+id/iv_base"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/newtask_icon_date"
+				android:visibility="invisible"
+			/>
+		    
+		    <LinearLayout 
+		        android:id="@+id/ll_right"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				android:layout_marginLeft="10dp"
+				android:layout_alignParentRight="true"
+				android:layout_toRightOf="@id/iv_base"
+				android:orientation="vertical"
+		        >
+		    
+			    <TextView 
+					android:id="@+id/tv_start_time"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:background="@drawable/inputbox"
+					android:text="@string/detail_start_time"
+					android:textColor="@android:color/darker_gray"
+					android:textSize="16sp"
+
+				/>
+			    <TextView 
+					android:id="@+id/tv_end_time"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:background="@drawable/inputbox"
+					android:text="@string/detail_end_time"
+					android:textColor="@android:color/darker_gray"
+					android:textSize="16sp"
+					android:layout_marginTop="10dp"
+				/>
+		        		        
+		    </LinearLayout>
+		    
+		    <RelativeLayout 
+		        android:id="@+id/rl_images_left"
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+		        android:layout_toLeftOf="@id/ll_right"
+		        android:layout_alignTop="@id/ll_right"
+		        android:layout_alignBottom="@id/ll_right"
+		        >
+		        <ImageView 
+		            android:id="@+id/iv_icon_start"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:src="@drawable/newtask_icon_date"
+				    android:layout_centerHorizontal="true"
+				    android:layout_alignParentTop="true"
+				    android:layout_marginTop="10dp"
+				/>
+		        <ImageView 
+		            android:id="@+id/iv_icon_end"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:src="@drawable/newtask_icon_date"
+				    android:layout_marginBottom="10dp"
+				    android:layout_alignParentBottom="true"
+			    />	
+			    
+		        <ImageView 
+		            android:id="@+id/iv_icon_line"
+				    android:layout_width="wrap_content"
+				    android:layout_height="match_parent"
+				    android:layout_centerHorizontal="true"
+				    android:src="@drawable/newtask_icon_dateline"
+					android:layout_below="@id/iv_icon_start"
+					android:layout_above="@id/iv_icon_end"
+					android:layout_marginTop="-4dp"
+					android:layout_marginBottom="-5dp"
+			    />
+		        		        
+		    </RelativeLayout>
+		</RelativeLayout>
+		<!-- 任务开始/结束时间  end-->
+		
+		<!-- 提醒设置(1) -->
+		<RelativeLayout 
+		    android:id="@+id/rl_remind_1"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:paddingLeft="10dp"
+		    android:paddingTop="5dp"
+		    android:paddingBottom="5dp"
+		    android:layout_marginRight="10dp"
+		    android:layout_gravity="center_vertical"
+		    >
+		    <ImageView 
+		        android:id="@+id/iv_icon_alarm_1"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:src="@drawable/newtask_icon_alarm"
+			    android:layout_alignParentLeft="true"
+			    android:layout_centerVertical="true"
+			    />
+		    
+			<ImageView 
+			    android:id="@+id/iv_icon_alarm_status_1"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:src="@drawable/newtask_alarm_on"
+			    android:layout_centerVertical="true"
+			    android:layout_alignParentRight="true"
+			    />
+		    	
+			<LinearLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal"
+			    android:layout_toRightOf="@id/iv_icon_alarm_1"
+			    android:layout_toLeftOf="@id/iv_icon_alarm_status_1"
+			    android:gravity="center_vertical"
+			    >
+				<TextView 
+				    android:id="@+id/et_time_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginRight="10dp"
+					android:layout_marginLeft="8dp"
+					android:layout_weight="1"
+					android:background="@drawable/inputbox"
+					android:text="@string/detail_remind_time"
+					android:textColor="@android:color/darker_gray"
+					android:textSize="16sp"/>
+				
+				<TextView 
+				    android:id="@+id/et_repeat_1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginRight="10dp"
+					android:layout_marginLeft="8dp"
+					android:layout_weight="1"
+					android:background="@drawable/inputbox"
+					android:text="@string/detail_remind_repeat"
+					android:textColor="@android:color/darker_gray"
+					android:textSize="16sp"/>		    
+			</LinearLayout>		
+		</RelativeLayout>
+		<!-- 提醒设置(1) end-->
+		
+		<!-- 提醒设置(2) begin-->
+		<RelativeLayout 
+		    android:id="@+id/rl_remind_2"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:paddingLeft="10dp"
+		    android:paddingTop="5dp"
+		    android:paddingBottom="5dp"
+		    android:layout_marginRight="10dp"
+		    android:layout_gravity="center_vertical"
+		    >
+		    <ImageView 
+		        android:id="@+id/iv_icon_alarm_2"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:src="@drawable/newtask_icon_alarm"
+			    android:layout_alignParentLeft="true"
+			    android:layout_centerVertical="true"
+			    />
+		    
+			<ImageView 
+			    android:id="@+id/iv_icon_alarm_status_2"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:src="@drawable/newtask_alarm_on"
+			    android:layout_centerVertical="true"
+			    android:layout_alignParentRight="true"
+			    />
+		    	
+			<LinearLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal"
+			    android:layout_toRightOf="@id/iv_icon_alarm_2"
+			    android:layout_toLeftOf="@id/iv_icon_alarm_status_2"
+			    android:gravity="center_vertical"
+			    >
+				<TextView 
+				    android:id="@+id/et_time_2"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginRight="10dp"
+					android:layout_marginLeft="8dp"
+					android:layout_weight="1"
+					android:background="@drawable/inputbox"
+					android:text="@string/detail_update_remind_time"
+					android:textColor="@android:color/darker_gray"
+					android:textSize="16sp"/>
+				
+				<TextView 
+				    android:id="@+id/et_repeat_2"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginRight="10dp"
+					android:layout_marginLeft="8dp"
+					android:layout_weight="1"
+					android:background="@drawable/inputbox"
+					android:text="@string/detail_remind_repeat"
+					android:textColor="@android:color/darker_gray"
+					android:textSize="16sp"/>		    
+			</LinearLayout>		
+		</RelativeLayout>
+		<!-- 提醒设置(2) end-->
+		
+		<!-- 专注时长 begin-->
+		<RelativeLayout 
+		    android:id="@+id/rl_concent"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:paddingLeft="10dp"
+		    android:paddingTop="5dp"
+		    android:paddingBottom="5dp"
+		    android:layout_marginRight="10dp"
+		    android:layout_gravity="center_vertical"
+		    >
+		    <ImageView 
+		        android:id="@+id/iv_icon_concent_time"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:src="@drawable/newtask_icon_time"
+			    android:layout_alignParentLeft="true"
+			    android:layout_centerVertical="true"
+			    />
+		    
+			<ImageView 
+			    android:id="@+id/iv_icon_no_mean"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:src="@drawable/newtask_alarm_off"
+			    android:layout_centerVertical="true"
+			    android:layout_alignParentRight="true"
+			    android:visibility="invisible"
+			    />
+		    	
+			<LinearLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal"
+			    android:layout_toRightOf="@id/iv_icon_concent_time"
+			    android:layout_toLeftOf="@id/iv_icon_no_mean"
+			    android:gravity="center_vertical"
+			    >
+				<TextView 
+				    android:id="@+id/et_concent_time"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginRight="10dp"
+					android:layout_marginLeft="8dp"
+					android:layout_weight="1"
+					android:background="@drawable/inputbox"
+					android:text="@string/detail_concent_time"
+					android:textColor="@android:color/darker_gray"
+					android:textSize="16sp"
+					/>
+				
+				<TextView 
+				    android:id="@+id/et_concent_time_no_mean"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginRight="10dp"
+					android:layout_marginLeft="8dp"
+					android:layout_weight="1"
+					android:background="@drawable/inputbox"
+					android:text="@string/detail_remind_repeat"
+					android:textSize="16sp"
+					android:visibility="invisible"
+					/>		    
+			</LinearLayout>		
+		</RelativeLayout>
+		<!-- 专注时长 end-->
+
+	    <!-- 写给任务完成时的自己 begin-->
+	    <LinearLayout 
+	        style="@style/task_scheduler_info_detail_item"
+	        android:orientation="horizontal">
+			<ImageView 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:src="@drawable/newtask_icon_title"
+			    android:layout_gravity="top"
+			    />
+			<RelativeLayout 
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    >
+				<EditText 
+					android:id="@+id/tvCompleteContent"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:minLines="3"
+					android:gravity="top"
+					android:layout_marginRight="10dp"
+					android:layout_marginLeft="8dp"
+					android:background="@drawable/input_style"
+					android:hint="@string/detail_words_for_success"
+					android:textSize="16sp"/>
+				<TextView
+				    android:id="@+id/tv_complete_words_counter" 
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_alignRight="@id/tvCompleteContent"
+				    android:layout_alignBottom="@id/tvCompleteContent"
+				    android:layout_marginRight="2dp"
+				    android:text="@string/text_limit"
+				    android:textColor="@color/color_red"
+				    android:textSize="10sp"
+				    />			    
+			</RelativeLayout>
+
+		</LinearLayout>
+		<!-- 写给任务完成时的自己 end-->
+		
+		<Button 
+		    android:id="@+id/submit_no_share"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:text="@string/save"
+		    android:textColor="@color/color_white"
+		    android:textSize="20sp"
+		    android:background="@drawable/button_selector"
+		    android:layout_marginLeft="10dp"
+		    android:layout_marginRight="10dp"
+		    />
+		<LinearLayout 
+	        style="@style/task_scheduler_info_detail_item"
+	        android:orientation="horizontal">
+		<Button
+		    android:id="@+id/btn_save_share"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:text="@string/detail_save_share" 
+		    android:background="@drawable/button_selector"
+		    android:layout_marginRight="10dp"
+		    android:textSize="20sp"
+		    android:textColor="@android:color/white"
+		    />		
+		    </LinearLayout>		
+
+		
+	</LinearLayout>
+</ScrollView>

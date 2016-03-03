@@ -1,0 +1,162 @@
+<com.chenzao.view.ResizeableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    xmlns:chenzao="http://schemas.android.com/apk/res/com.xiaosajie.chenzao"
+    android:id="@+id/login_bg"
+    android:background="@drawable/login_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+        <ScrollView
+            android:id="@+id/scorllview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:scrollbars="none" >
+
+            <RelativeLayout
+                android:id="@+id/ly_top"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView 
+                    android:id="@+id/chenzaologo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/chenzaologo"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="60dp"
+                    
+                    />
+                
+                <RelativeLayout 
+                    android:id="@+id/input_user_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/chenzaologo"
+					android:layout_marginLeft="30dp"
+					android:layout_marginRight="30dp"
+                    >
+                    <AutoCompleteTextView
+                        android:id="@+id/etLoginUsername"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/login_input_height"
+                        android:hint="@string/user_name"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:background="@drawable/input_style"
+                        android:maxLength="64"
+                        android:paddingLeft="@dimen/login_input_padding_left"
+						android:textColor="@color/color_gray"
+						android:textColorHint="@color/color_gray"
+						android:textSize="@dimen/input_text_size"
+                        android:singleLine="true"
+                        />
+                    <ImageView
+                        android:id="@+id/tvUsrname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/login_input_icon_marginleft"
+                        android:layout_alignLeft="@id/etLoginUsername"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_user"
+                        />
+                    					
+                </RelativeLayout>
+
+                <RelativeLayout 
+                    android:id="@+id/input_psw_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/input_user_layout"
+                    android:layout_marginTop="15dp"
+					android:layout_marginLeft="30dp"
+					android:layout_marginRight="30dp"
+                    >
+                    <EditText
+                         android:id="@+id/etLoginPsw"
+                         android:layout_width="fill_parent"
+                         android:layout_height="@dimen/login_input_height"
+                         android:background="@drawable/input_style"
+                         android:hint="@string/login_account_pwd_tips"
+                         android:imeOptions="actionNext"
+                         android:inputType="textPassword"
+						android:textColor="@color/color_gray"
+						android:textColorHint="@color/color_gray"
+						android:textSize="@dimen/input_text_size"
+                         android:paddingLeft="@dimen/login_input_padding_left"
+                         android:maxLength="64"
+                         android:singleLine="true"
+                         />
+                    <ImageView
+                        android:id="@+id/tvPsw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/login_input_icon_marginleft"
+                        android:layout_alignLeft="@id/etLoginPsw"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_pw"
+                        />
+                </RelativeLayout>
+
+                <TextView 
+                    android:id="@+id/tvForgetpsw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/forgetPswclick"
+                    android:layout_below="@id/input_psw_layout"
+                    android:layout_marginTop="10dp"
+					android:layout_marginLeft="30dp"
+					android:textColor="@color/color_gray"
+                    />
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login"
+                    android:layout_below="@id/tvForgetpsw"
+                    android:layout_marginTop="50dp"
+					android:layout_marginLeft="30dp"
+					android:layout_marginRight="30dp"
+                    android:background="@drawable/button_selector"
+                    android:textColor="@color/color_white"
+                    android:textSize="18sp"
+                    />
+                <LinearLayout 
+                    android:id="@+id/lyLinearly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/btnLogin"
+                    android:layout_marginTop="30dp"
+                    >
+	                <TextView 
+	                    android:id="@+id/tvRegistdes"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:text="@string/notmember"
+	                    android:textColor="@color/color_gray"
+	                    />
+	                <TextView 
+	                    android:id="@+id/tvRegist"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:text="@string/fastregist"
+	                    android:textColor="@color/color_red"
+	                    />
+	                <ImageView
+	                    android:id="@+id/imgRegist"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_gravity="center_vertical"
+	                    android:src="@drawable/icon_arrow"/>
+	                
+                </LinearLayout>
+
+                </RelativeLayout>
+        </ScrollView>
+
+
+</com.chenzao.view.ResizeableLayout>

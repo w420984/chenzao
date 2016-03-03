@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    >
+    <ImageView 
+        android:id="@+id/img_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/official_1_img"
+        android:layout_marginTop="50dp"
+        />
+
+    <TextView 
+        android:id="@+id/tv_intro"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:textColor="@color/color_white"
+        android:layout_below="@id/img_title"
+        android:layout_marginTop="30dp"
+        android:text="@string/task_100day_intro"
+        />
+    
+    <Button 
+        android:id="@+id/btn_start"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/start_task"
+        android:textColor="@color/color_white"
+        android:background="@drawable/official_begin_btn"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/tv_intro"
+        />
+    
+	<RelativeLayout 
+		android:id="@+id/rl_task_info"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="@drawable/task_below_btn_frame"
+        android:layout_marginTop="40dp"
+		android:layout_below="@id/tv_intro"
+		android:visibility="gone"
+		android:layout_centerHorizontal="true"
+	    >
+	    <TextView 
+	        android:id="@+id/tv_history"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/task_scheduler_history"
+	        android:textColor="@android:color/white"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="20dp"
+	        android:gravity="center_vertical"
+	        />
+	
+	    <TextView 
+	        android:id="@+id/tv_restart"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/restart_task"
+	        android:textColor="@android:color/white"
+	        android:paddingLeft="20dp"
+	        android:paddingRight="10dp"
+	        android:layout_toRightOf="@id/tv_history"
+	        android:gravity="center_vertical"
+	        />
+	    
+		 <ImageView
+	         android:id="@+id/iv_line11"
+		     android:layout_width="1dp"
+		     android:layout_height="10dp"
+		     android:src="@drawable/task_below_btn_line"
+		     android:layout_centerInParent="true"
+			 />
+	</RelativeLayout>
+	
+	<TextView
+	     android:id="@+id/tv_index_show"
+	     android:layout_width="match_parent"
+	     android:layout_height="wrap_content"
+	     android:layout_alignParentBottom="true"
+	     android:layout_marginBottom="20dp"
+	     android:gravity="center_horizontal"
+	     android:textColor="@android:color/white"
+	     /> 
+</RelativeLayout>

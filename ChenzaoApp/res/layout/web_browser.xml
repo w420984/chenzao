@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<RelativeLayout 
+  xmlns:android="http://schemas.android.com/apk/res/android" 
+  android:background="@android:color/white" 
+  android:orientation="vertical" 
+  android:layout_width="fill_parent" 
+  android:layout_height="fill_parent" 
+  > 
+  <RelativeLayout 
+      android:id="@+id/rl_loading_bar"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:background="@color/color_gray"
+      >
+	  <com.chenzao.view.LoadingBar
+	      android:id="@+id/loading_bar"
+	      android:layout_width="fill_parent"
+	      android:layout_height="12dp"
+	      android:layout_alignParentTop="true"
+	      android:background="@android:color/transparent" />
+	  <TextView 
+	      android:id="@+id/loading_bar_text"
+	      android:layout_width="fill_parent"
+	      android:layout_height="12dp"
+	      android:gravity="center"
+	      android:text="@string/loading"
+	      android:textColor="@color/color_white"
+	      android:textSize="8dp"
+	      />
+  </RelativeLayout>
+  <RelativeLayout
+      android:id="@+id/webview_container"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:layout_below="@id/loading_bar" >
+  </RelativeLayout>
+</RelativeLayout>
